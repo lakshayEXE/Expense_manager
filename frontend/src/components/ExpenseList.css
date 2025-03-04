@@ -1,0 +1,135 @@
+/* ExpenseList.css */
+.expense-list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .expense-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #E5E7EB;
+    font-size: 0.875rem;
+    color: #6B7280;
+  }
+  
+  .expense-items {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 600px;
+  }
+  
+  .expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+    border-bottom: 1px solid #E5E7EB;
+    transition: background-color 0.2s;
+  }
+  
+  .expense-item:last-child {
+    border-bottom: none;
+  }
+  
+  .expense-item:hover {
+    background-color: #F9FAFB;
+  }
+  
+  .expense-info {
+    flex: 1;
+  }
+  
+  .expense-title {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #1F2937;
+  }
+  
+  .expense-meta {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #6B7280;
+    margin-bottom: 0.25rem;
+  }
+  
+  .expense-date {
+    margin-right: 0.5rem;
+  }
+  
+  .expense-category {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  
+  .expense-description {
+    font-size: 0.875rem;
+    color: #6B7280;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+  }
+  
+  .expense-amount {
+    font-weight: 700;
+    color: #EF4444;
+    font-size: 1.125rem;
+    white-space: nowrap;
+    margin-left: 1rem;
+  }
+  
+  .no-expenses {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    color: #6B7280;
+    font-style: italic;
+    text-align: center;
+    border: 2px dashed #E5E7EB;
+    border-radius: 0.5rem;
+    padding: 2rem;
+  }
+  
+  /* Scrollbar styling */
+  .expense-items::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .expense-items::-webkit-scrollbar-track {
+    background: #F3F4F6;
+    border-radius: 4px;
+  }
+  
+  .expense-items::-webkit-scrollbar-thumb {
+    background-color: #D1D5DB;
+    border-radius: 4px;
+  }
+  
+  .expense-items::-webkit-scrollbar-thumb:hover {
+    background-color: #9CA3AF;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .expense-meta {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .expense-category {
+      margin-top: 0.25rem;
+      margin-left: 0;
+    }
+    
+    .expense-amount {
+      font-size: 1rem;
+    }
+  }
